@@ -1,0 +1,573 @@
+# Commercial Integration License Knowledge Base
+
+Version: 1.0 | Review date: 2026-11-23
+
+**Scope:** Curated common software, content and source-available licensing patterns; not the complete SPDX list
+
+## Risk legend
+
+- **green**: generally low-friction with conditions
+- **amber**: conditional, requires architecture/compliance review
+- **red**: likely incompatible with proposed restricted activity or high-risk; obtain permission/remediate
+- **unknown**: insufficient evidence or rights grant
+
+## Official sources
+
+- https://spdx.org/licenses/
+- https://opensource.org/licenses
+- https://choosealicense.com/appendix/
+- https://www.gnu.org/licenses/gpl-faq.html
+- https://creativecommons.org/faq/
+
+## Licenses summary
+
+| SPDX ID | Name | Family | Default risk | Legal review required |
+|---|---|---|---|---|
+| MIT | MIT License | permissive | green | False |
+| Apache-2.0 | Apache License 2.0 | permissive | green | False |
+| BSD-2-Clause | BSD 2-Clause Simplified License | permissive | green | False |
+| BSD-3-Clause | BSD 3-Clause New/Revised License | permissive | green | False |
+| BSD-4-Clause | BSD 4-Clause Original License | permissive with advertising clause | amber | True |
+| ISC | ISC License | permissive | green | False |
+| 0BSD | BSD Zero Clause License | permissive | green | False |
+| Zlib | zlib License | permissive | green | False |
+| Unlicense | The Unlicense | public-domain-style dedication | amber | True |
+| CC0-1.0 | Creative Commons Zero v1.0 Universal | public-domain-style dedication | amber | True |
+| BSL-1.0 | Boost Software License 1.0 | permissive | green | False |
+| MPL-2.0 | Mozilla Public License 2.0 | file-level copyleft | amber | True |
+| EPL-2.0 | Eclipse Public License 2.0 | weak copyleft | amber | True |
+| CDDL-1.0 | Common Development and Distribution License 1.0 | file-level copyleft | amber | True |
+| LGPL-2.1-only | GNU Lesser General Public License v2.1 only | library copyleft | amber | True |
+| LGPL-2.1-or-later | GNU Lesser General Public License v2.1 or later | library copyleft | amber | True |
+| LGPL-3.0-only | GNU Lesser General Public License v3.0 only | library copyleft | amber | True |
+| GPL-2.0-only | GNU General Public License v2.0 only | strong copyleft | amber | True |
+| GPL-2.0-or-later | GNU General Public License v2.0 or later | strong copyleft | amber | True |
+| GPL-3.0-only | GNU General Public License v3.0 only | strong copyleft | amber | True |
+| GPL-3.0-or-later | GNU General Public License v3.0 or later | strong copyleft | amber | True |
+| AGPL-3.0-only | GNU Affero General Public License v3.0 only | network copyleft | amber | True |
+| AGPL-3.0-or-later | GNU Affero General Public License v3.0 or later | network copyleft | amber | True |
+| EUPL-1.2 | European Union Public Licence 1.2 | copyleft with compatibility appendix | amber | True |
+| Artistic-2.0 | Artistic License 2.0 | conditional permissive/copy-left-like | amber | True |
+| OFL-1.1 | SIL Open Font License 1.1 | font license | green | False |
+| CC-BY-4.0 | Creative Commons Attribution 4.0 International | content/asset license | amber | True |
+| CC-BY-SA-4.0 | Creative Commons Attribution-ShareAlike 4.0 International | content copyleft | amber | True |
+| CC-BY-NC-4.0 | Creative Commons Attribution-NonCommercial 4.0 International | noncommercial content | red | True |
+| CC-BY-ND-4.0 | Creative Commons Attribution-NoDerivatives 4.0 International | no-derivatives content | amber | True |
+| CC-BY-NC-SA-4.0 | Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International | noncommercial content | red | True |
+| CC-BY-NC-ND-4.0 | Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International | noncommercial content | red | True |
+| SSPL-1.0 | Server Side Public License v1 | source-available, service copyleft | red | True |
+| BUSL-1.1 | Business Source License 1.1 | source-available/custom parameters | amber | True |
+| Elastic-2.0 | Elastic License 2.0 | source-available | amber | True |
+| Commons-Clause | Commons Clause license condition (supplement) | restriction addendum | red | True |
+| PolyForm-Noncommercial-1.0.0 | PolyForm Noncommercial License 1.0.0 | source-available noncommercial | red | True |
+| LicenseRef-Proprietary | Proprietary / custom EULA | proprietary | unknown | True |
+| NOASSERTION | No identifiable license grant | unlicensed / unknown | unknown | True |
+
+## License details
+
+### MIT — MIT License
+- **Family:** permissive
+- **Commercial product integration:** Generally allowed
+- **Main consideration:** Keep copyright and license text
+- **Notice attribution:** Copyright + license
+- **Source code distribution trigger:** None from MIT alone
+- **Saas network consideration:** None from MIT alone
+- **Default screening risk:** green
+- **Reference url:** https://spdx.org/licenses/MIT.html
+- **Additional sources:** https://spdx.org/licenses/
+- **Legal review required:** False
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### Apache-2.0 — Apache License 2.0
+- **Family:** permissive
+- **Commercial product integration:** Generally allowed
+- **Main consideration:** Keep license, required notices and changed-file notices; patent grant/termination
+- **Notice attribution:** License, attribution, NOTICE when applicable
+- **Source code distribution trigger:** None from Apache alone
+- **Saas network consideration:** None from Apache alone
+- **Default screening risk:** green
+- **Reference url:** https://spdx.org/licenses/Apache-2.0.html
+- **Additional sources:** https://spdx.org/licenses/
+- **Legal review required:** False
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### BSD-2-Clause — BSD 2-Clause Simplified License
+- **Family:** permissive
+- **Commercial product integration:** Generally allowed
+- **Main consideration:** Keep copyright, conditions and disclaimer
+- **Notice attribution:** Copyright + disclaimer
+- **Source code distribution trigger:** None
+- **Saas network consideration:** None
+- **Default screening risk:** green
+- **Reference url:** https://spdx.org/licenses/BSD-2-Clause.html
+- **Additional sources:** https://spdx.org/licenses/
+- **Legal review required:** False
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### BSD-3-Clause — BSD 3-Clause New/Revised License
+- **Family:** permissive
+- **Commercial product integration:** Generally allowed
+- **Main consideration:** Retain notices; no endorsement using contributor names
+- **Notice attribution:** Copyright + disclaimer
+- **Source code distribution trigger:** None
+- **Saas network consideration:** None
+- **Default screening risk:** green
+- **Reference url:** https://spdx.org/licenses/BSD-3-Clause.html
+- **Additional sources:** https://spdx.org/licenses/
+- **Legal review required:** False
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### BSD-4-Clause — BSD 4-Clause Original License
+- **Family:** permissive with advertising clause
+- **Commercial product integration:** Conditional
+- **Main consideration:** Advertising acknowledgement obligation; compatibility concerns
+- **Notice attribution:** Copyright + advertising notice
+- **Source code distribution trigger:** None
+- **Saas network consideration:** None
+- **Default screening risk:** amber
+- **Reference url:** https://spdx.org/licenses/BSD-4-Clause.html
+- **Additional sources:** https://spdx.org/licenses/
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### ISC — ISC License
+- **Family:** permissive
+- **Commercial product integration:** Generally allowed
+- **Main consideration:** Retain copyright and permission text
+- **Notice attribution:** Copyright + license
+- **Source code distribution trigger:** None
+- **Saas network consideration:** None
+- **Default screening risk:** green
+- **Reference url:** https://spdx.org/licenses/ISC.html
+- **Additional sources:** https://spdx.org/licenses/
+- **Legal review required:** False
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### 0BSD — BSD Zero Clause License
+- **Family:** permissive
+- **Commercial product integration:** Generally allowed
+- **Main consideration:** Minimal conditions; check other materials
+- **Notice attribution:** Usually none under this license
+- **Source code distribution trigger:** None
+- **Saas network consideration:** None
+- **Default screening risk:** green
+- **Reference url:** https://spdx.org/licenses/0BSD.html
+- **Additional sources:** https://spdx.org/licenses/
+- **Legal review required:** False
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### Zlib — zlib License
+- **Family:** permissive
+- **Commercial product integration:** Generally allowed
+- **Main consideration:** Do not misrepresent origin; mark altered source versions; preserve notice
+- **Notice attribution:** Source notices and alteration marking
+- **Source code distribution trigger:** None
+- **Saas network consideration:** None
+- **Default screening risk:** green
+- **Reference url:** https://spdx.org/licenses/Zlib.html
+- **Additional sources:** https://spdx.org/licenses/
+- **Legal review required:** False
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### Unlicense — The Unlicense
+- **Family:** public-domain-style dedication
+- **Commercial product integration:** Generally allowed, jurisdiction-dependent
+- **Main consideration:** Dedication/fallback terms and validity differ by jurisdiction; check patent rights
+- **Notice attribution:** Check included text
+- **Source code distribution trigger:** None
+- **Saas network consideration:** None
+- **Default screening risk:** amber
+- **Reference url:** https://spdx.org/licenses/Unlicense.html
+- **Additional sources:** https://spdx.org/licenses/
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### CC0-1.0 — Creative Commons Zero v1.0 Universal
+- **Family:** public-domain-style dedication
+- **Commercial product integration:** Generally allowed for covered material
+- **Main consideration:** Patent and trademark rights are not granted; software suitability review
+- **Notice attribution:** No attribution condition, but track provenance
+- **Source code distribution trigger:** None
+- **Saas network consideration:** None
+- **Default screening risk:** amber
+- **Reference url:** https://spdx.org/licenses/CC0-1.0.html
+- **Additional sources:** https://spdx.org/licenses/
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### BSL-1.0 — Boost Software License 1.0
+- **Family:** permissive
+- **Commercial product integration:** Generally allowed
+- **Main consideration:** Preserve copyright and license in source distributions; binary exception
+- **Notice attribution:** Source distribution notices
+- **Source code distribution trigger:** None
+- **Saas network consideration:** None
+- **Default screening risk:** green
+- **Reference url:** https://spdx.org/licenses/BSL-1.0.html
+- **Additional sources:** https://spdx.org/licenses/
+- **Legal review required:** False
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### MPL-2.0 — Mozilla Public License 2.0
+- **Family:** file-level copyleft
+- **Commercial product integration:** Conditional
+- **Main consideration:** Modifications to MPL-covered files and distribution of those files trigger source/licensing duties; check secondary licenses
+- **Notice attribution:** Notices and license
+- **Source code distribution trigger:** Covered files upon distribution
+- **Saas network consideration:** No general network-source obligation
+- **Default screening risk:** amber
+- **Reference url:** https://spdx.org/licenses/MPL-2.0.html
+- **Additional sources:** https://spdx.org/licenses/; https://opensource.org/licenses; https://www.gnu.org/licenses/gpl-faq.html
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### EPL-2.0 — Eclipse Public License 2.0
+- **Family:** weak copyleft
+- **Commercial product integration:** Conditional
+- **Main consideration:** Distribution of covered program and contributions; secondary license provisions and patent terms
+- **Notice attribution:** Required notices + license
+- **Source code distribution trigger:** Covered contributions when distributing
+- **Saas network consideration:** No general network-source obligation
+- **Default screening risk:** amber
+- **Reference url:** https://spdx.org/licenses/EPL-2.0.html
+- **Additional sources:** https://spdx.org/licenses/; https://opensource.org/licenses; https://www.gnu.org/licenses/gpl-faq.html
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### CDDL-1.0 — Common Development and Distribution License 1.0
+- **Family:** file-level copyleft
+- **Commercial product integration:** Conditional
+- **Main consideration:** Covered source modifications and corresponding source on distribution; GPL combination may conflict
+- **Notice attribution:** Required notices + license
+- **Source code distribution trigger:** Covered files when distributing
+- **Saas network consideration:** No general network-source obligation
+- **Default screening risk:** amber
+- **Reference url:** https://spdx.org/licenses/CDDL-1.0.html
+- **Additional sources:** https://spdx.org/licenses/; https://opensource.org/licenses; https://www.gnu.org/licenses/gpl-faq.html
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### LGPL-2.1-only — GNU Lesser General Public License v2.1 only
+- **Family:** library copyleft
+- **Commercial product integration:** Conditional
+- **Main consideration:** Library changes and relinking/replacement ability; static linking can increase packaging obligations
+- **Notice attribution:** Notices + license
+- **Source code distribution trigger:** Library source and applicable relinking materials upon distribution
+- **Saas network consideration:** No general network-source obligation
+- **Default screening risk:** amber
+- **Reference url:** https://spdx.org/licenses/LGPL-2.1-only.html
+- **Additional sources:** https://spdx.org/licenses/; https://opensource.org/licenses; https://www.gnu.org/licenses/gpl-faq.html
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### LGPL-2.1-or-later — GNU Lesser General Public License v2.1 or later
+- **Family:** library copyleft
+- **Commercial product integration:** Conditional
+- **Main consideration:** Verify selected version and requirements for library distribution and relinking
+- **Notice attribution:** Notices + license
+- **Source code distribution trigger:** Library/source and applicable relinking obligations
+- **Saas network consideration:** No general network-source obligation
+- **Default screening risk:** amber
+- **Reference url:** https://spdx.org/licenses/LGPL-2.1-or-later.html
+- **Additional sources:** https://spdx.org/licenses/; https://opensource.org/licenses; https://www.gnu.org/licenses/gpl-faq.html
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### LGPL-3.0-only — GNU Lesser General Public License v3.0 only
+- **Family:** library copyleft
+- **Commercial product integration:** Conditional
+- **Main consideration:** GPLv3-based requirements, library modifications, replacement/relinking, installation information where triggered
+- **Notice attribution:** Notices + license
+- **Source code distribution trigger:** Library source and applicable installation/relinking materials
+- **Saas network consideration:** No general network-source obligation
+- **Default screening risk:** amber
+- **Reference url:** https://spdx.org/licenses/LGPL-3.0-only.html
+- **Additional sources:** https://spdx.org/licenses/; https://opensource.org/licenses; https://www.gnu.org/licenses/gpl-faq.html
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### GPL-2.0-only — GNU General Public License v2.0 only
+- **Family:** strong copyleft
+- **Commercial product integration:** Conditional
+- **Main consideration:** Distribution of combined derivative work can require GPLv2 terms and corresponding source; version incompatibilities
+- **Notice attribution:** License + notices
+- **Source code distribution trigger:** Corresponding source upon distribution
+- **Saas network consideration:** Hosted use alone generally no source trigger
+- **Default screening risk:** amber
+- **Reference url:** https://spdx.org/licenses/GPL-2.0-only.html
+- **Additional sources:** https://spdx.org/licenses/; https://opensource.org/licenses; https://www.gnu.org/licenses/gpl-faq.html
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### GPL-2.0-or-later — GNU General Public License v2.0 or later
+- **Family:** strong copyleft
+- **Commercial product integration:** Conditional
+- **Main consideration:** Recipient may use later versions; evaluate selected-version compatibility and source duties
+- **Notice attribution:** License + notices
+- **Source code distribution trigger:** Corresponding source upon distribution
+- **Saas network consideration:** Hosted use alone generally no source trigger
+- **Default screening risk:** amber
+- **Reference url:** https://spdx.org/licenses/GPL-2.0-or-later.html
+- **Additional sources:** https://spdx.org/licenses/; https://opensource.org/licenses; https://www.gnu.org/licenses/gpl-faq.html
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### GPL-3.0-only — GNU General Public License v3.0 only
+- **Family:** strong copyleft
+- **Commercial product integration:** Conditional
+- **Main consideration:** Distribution copyleft; corresponding source, anti-tivoization/installation information in certain cases, patent terms
+- **Notice attribution:** License + notices
+- **Source code distribution trigger:** Corresponding source upon distribution
+- **Saas network consideration:** Hosted use alone generally no source trigger
+- **Default screening risk:** amber
+- **Reference url:** https://spdx.org/licenses/GPL-3.0-only.html
+- **Additional sources:** https://spdx.org/licenses/; https://opensource.org/licenses; https://www.gnu.org/licenses/gpl-faq.html
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### GPL-3.0-or-later — GNU General Public License v3.0 or later
+- **Family:** strong copyleft
+- **Commercial product integration:** Conditional
+- **Main consideration:** As GPLv3 with later-version option; compatibility and installation obligations
+- **Notice attribution:** License + notices
+- **Source code distribution trigger:** Corresponding source upon distribution
+- **Saas network consideration:** Hosted use alone generally no source trigger
+- **Default screening risk:** amber
+- **Reference url:** https://spdx.org/licenses/GPL-3.0-or-later.html
+- **Additional sources:** https://spdx.org/licenses/; https://opensource.org/licenses; https://www.gnu.org/licenses/gpl-faq.html
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### AGPL-3.0-only — GNU Affero General Public License v3.0 only
+- **Family:** network copyleft
+- **Commercial product integration:** Conditional
+- **Main consideration:** Modified program interacting with network users can require source offer; distribution also triggers copyleft
+- **Notice attribution:** License + notices
+- **Source code distribution trigger:** Corresponding source upon distribution
+- **Saas network consideration:** Section 13 remote users of modified version
+- **Default screening risk:** amber
+- **Reference url:** https://spdx.org/licenses/AGPL-3.0-only.html
+- **Additional sources:** https://spdx.org/licenses/; https://opensource.org/licenses; https://www.gnu.org/licenses/gpl-faq.html
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### AGPL-3.0-or-later — GNU Affero General Public License v3.0 or later
+- **Family:** network copyleft
+- **Commercial product integration:** Conditional
+- **Main consideration:** As AGPLv3 with later-version option; analyze modifications and combined work
+- **Notice attribution:** License + notices
+- **Source code distribution trigger:** Corresponding source upon distribution
+- **Saas network consideration:** Section 13 remote users of modified version
+- **Default screening risk:** amber
+- **Reference url:** https://spdx.org/licenses/AGPL-3.0-or-later.html
+- **Additional sources:** https://spdx.org/licenses/; https://opensource.org/licenses; https://www.gnu.org/licenses/gpl-faq.html
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### EUPL-1.2 — European Union Public Licence 1.2
+- **Family:** copyleft with compatibility appendix
+- **Commercial product integration:** Conditional
+- **Main consideration:** Distribution/share-alike and enumerated compatible license provisions; jurisdiction/compatibility review
+- **Notice attribution:** Attribution + license
+- **Source code distribution trigger:** Covered work when distributed/communicated as defined
+- **Saas network consideration:** Network provision may be distribution/communication under EUPL definitions; review
+- **Default screening risk:** amber
+- **Reference url:** https://spdx.org/licenses/EUPL-1.2.html
+- **Additional sources:** https://spdx.org/licenses/; https://opensource.org/licenses; https://www.gnu.org/licenses/gpl-faq.html
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### Artistic-2.0 — Artistic License 2.0
+- **Family:** conditional permissive/copy-left-like
+- **Commercial product integration:** Conditional
+- **Main consideration:** Modified source distribution has multiple compliance routes; confirm chosen route
+- **Notice attribution:** License + notices
+- **Source code distribution trigger:** Depends on modification/distribution route
+- **Saas network consideration:** No generally stated AGPL-like trigger
+- **Default screening risk:** amber
+- **Reference url:** https://spdx.org/licenses/Artistic-2.0.html
+- **Additional sources:** https://spdx.org/licenses/
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### OFL-1.1 — SIL Open Font License 1.1
+- **Family:** font license
+- **Commercial product integration:** Generally allowed for fonts
+- **Main consideration:** Font redistribution, reserved font names, no selling font alone
+- **Notice attribution:** OFL + copyright
+- **Source code distribution trigger:** Modified fonts subject to OFL
+- **Saas network consideration:** None
+- **Default screening risk:** green
+- **Reference url:** https://spdx.org/licenses/OFL-1.1.html
+- **Additional sources:** https://spdx.org/licenses/
+- **Legal review required:** False
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### CC-BY-4.0 — Creative Commons Attribution 4.0 International
+- **Family:** content/asset license
+- **Commercial product integration:** Conditional for assets; not recommended for software code
+- **Main consideration:** Attribution, change indication, license link; patent/trademark not granted
+- **Notice attribution:** Attribution + change indication
+- **Source code distribution trigger:** No source requirement
+- **Saas network consideration:** None
+- **Default screening risk:** amber
+- **Reference url:** https://spdx.org/licenses/CC-BY-4.0.html
+- **Additional sources:** https://spdx.org/licenses/
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### CC-BY-SA-4.0 — Creative Commons Attribution-ShareAlike 4.0 International
+- **Family:** content copyleft
+- **Commercial product integration:** Conditional for assets
+- **Main consideration:** Adapted materials share-alike; possible incompatibility with software licenses
+- **Notice attribution:** Attribution + change indication
+- **Source code distribution trigger:** Share-alike for adaptations
+- **Saas network consideration:** None
+- **Default screening risk:** amber
+- **Reference url:** https://spdx.org/licenses/CC-BY-SA-4.0.html
+- **Additional sources:** https://spdx.org/licenses/; https://opensource.org/licenses; https://www.gnu.org/licenses/gpl-faq.html
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### CC-BY-NC-4.0 — Creative Commons Attribution-NonCommercial 4.0 International
+- **Family:** noncommercial content
+- **Commercial product integration:** Generally incompatible with commercial uses without permission
+- **Main consideration:** NonCommercial restriction; commercial product uses require rights analysis/permission
+- **Notice attribution:** Attribution + change indication
+- **Source code distribution trigger:** No source requirement
+- **Saas network consideration:** None
+- **Default screening risk:** red
+- **Reference url:** https://spdx.org/licenses/CC-BY-NC-4.0.html
+- **Additional sources:** https://spdx.org/licenses/
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### CC-BY-ND-4.0 — Creative Commons Attribution-NoDerivatives 4.0 International
+- **Family:** no-derivatives content
+- **Commercial product integration:** Conditional for assets
+- **Main consideration:** Cannot share adapted material under license; commercial unmodified sharing can be permitted
+- **Notice attribution:** Attribution
+- **Source code distribution trigger:** No source requirement
+- **Saas network consideration:** None
+- **Default screening risk:** amber
+- **Reference url:** https://spdx.org/licenses/CC-BY-ND-4.0.html
+- **Additional sources:** https://spdx.org/licenses/
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### CC-BY-NC-SA-4.0 — Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+- **Family:** noncommercial content
+- **Commercial product integration:** Generally incompatible with commercial uses without permission
+- **Main consideration:** NonCommercial + ShareAlike; request commercial grant
+- **Notice attribution:** Attribution + change indication
+- **Source code distribution trigger:** Share-alike if sharing permitted adaptation
+- **Saas network consideration:** None
+- **Default screening risk:** red
+- **Reference url:** https://spdx.org/licenses/CC-BY-NC-SA-4.0.html
+- **Additional sources:** https://spdx.org/licenses/
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### CC-BY-NC-ND-4.0 — Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
+- **Family:** noncommercial content
+- **Commercial product integration:** Generally incompatible with commercial uses without permission
+- **Main consideration:** NonCommercial + NoDerivatives restrictions
+- **Notice attribution:** Attribution
+- **Source code distribution trigger:** No source requirement
+- **Saas network consideration:** None
+- **Default screening risk:** red
+- **Reference url:** https://spdx.org/licenses/CC-BY-NC-ND-4.0.html
+- **Additional sources:** https://spdx.org/licenses/
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### SSPL-1.0 — Server Side Public License v1
+- **Family:** source-available, service copyleft
+- **Commercial product integration:** Conditional/high risk for competing managed services
+- **Main consideration:** Service offering can trigger broad service source disclosure; not OSI-approved
+- **Notice attribution:** License + notices
+- **Source code distribution trigger:** License-defined obligations
+- **Saas network consideration:** Service-as-a-service trigger; inspect Section 13
+- **Default screening risk:** red
+- **Reference url:** https://spdx.org/licenses/SSPL-1.0.html
+- **Additional sources:** https://spdx.org/licenses/; https://opensource.org/licenses; https://www.gnu.org/licenses/gpl-faq.html
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### BUSL-1.1 — Business Source License 1.1
+- **Family:** source-available/custom parameters
+- **Commercial product integration:** Depends on individual project terms
+- **Main consideration:** Additional Use Grant, change date and change license determine rights; not automatically unrestricted commercial use
+- **Notice attribution:** As specified in project
+- **Source code distribution trigger:** Per project
+- **Saas network consideration:** Per project; production may be restricted
+- **Default screening risk:** amber
+- **Reference url:** https://spdx.org/licenses/BUSL-1.1.html
+- **Additional sources:** https://spdx.org/licenses/
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### Elastic-2.0 — Elastic License 2.0
+- **Family:** source-available
+- **Commercial product integration:** Conditional
+- **Main consideration:** Restrictions include providing as a managed service, circumvention of license-key functionality, and removal of notices
+- **Notice attribution:** License + notices
+- **Source code distribution trigger:** No generic copyleft
+- **Saas network consideration:** Managed-service restriction
+- **Default screening risk:** amber
+- **Reference url:** https://spdx.org/licenses/Elastic-2.0.html
+- **Additional sources:** https://spdx.org/licenses/
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### Commons-Clause — Commons Clause license condition (supplement)
+- **Family:** restriction addendum
+- **Commercial product integration:** Often restricted for sale/monetization
+- **Main consideration:** Not a standalone license; sales restriction adds to base license; exact permitted use depends on text
+- **Notice attribution:** As base license plus addendum
+- **Source code distribution trigger:** As base license
+- **Saas network consideration:** Sale restriction may affect SaaS
+- **Default screening risk:** red
+- **Reference url:** https://commonsclause.com/
+- **Additional sources:** https://spdx.org/licenses/
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### PolyForm-Noncommercial-1.0.0 — PolyForm Noncommercial License 1.0.0
+- **Family:** source-available noncommercial
+- **Commercial product integration:** Generally incompatible with commercial use
+- **Main consideration:** Commercial use prohibited without separate license; check defined terms
+- **Notice attribution:** Per license
+- **Source code distribution trigger:** Not general open-source grant
+- **Saas network consideration:** Commercial hosting is restricted
+- **Default screening risk:** red
+- **Reference url:** https://spdx.org/licenses/PolyForm-Noncommercial-1.0.0.html
+- **Additional sources:** https://spdx.org/licenses/
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### LicenseRef-Proprietary — Proprietary / custom EULA
+- **Family:** proprietary
+- **Commercial product integration:** Permission depends on contract
+- **Main consideration:** Must review product-specific contract, redistribution and use rights, indemnities
+- **Notice attribution:** Contract-specific
+- **Source code distribution trigger:** Contract-specific
+- **Saas network consideration:** Contract-specific
+- **Default screening risk:** unknown
+- **Reference url:** https://spdx.github.io/spdx-spec/v2.3/other-licensing-information-detected/
+- **Additional sources:** https://spdx.org/licenses/
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
+
+### NOASSERTION — No identifiable license grant
+- **Family:** unlicensed / unknown
+- **Commercial product integration:** Do not assume integration permission
+- **Main consideration:** Seek rights-holder permission or establish separate applicable license before copying/redistribution
+- **Notice attribution:** Unknown
+- **Source code distribution trigger:** Unknown
+- **Saas network consideration:** Unknown
+- **Default screening risk:** unknown
+- **Reference url:** https://choosealicense.com/no-permission/
+- **Additional sources:** https://spdx.org/licenses/
+- **Legal review required:** True
+- **Notes:** Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law.
