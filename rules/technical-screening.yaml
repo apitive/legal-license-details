@@ -1,0 +1,46 @@
+# Technical screening: project health / maintenance metrics for an open-source component.
+# Complements the license rules; a component can be license-clean and still be a technical risk.
+# Screening guidance only.
+version: "1.0"
+review_date: "2026-11-24"
+
+# Rate each metric green / amber / red from the thresholds below.
+metrics:
+  - id: commit-months
+    name: Months with meaningful commits (last 12)
+    unit: months
+    green: "9-12"
+    amber: "4-8"
+    red: "0-3"
+  - id: active-contributors
+    name: Active contributors (last 12 months)
+    unit: contributors
+    green: "3+"
+    amber: "2"
+    red: "1 or none"
+  - id: top-contributor-share
+    name: Top contributor share of commits
+    unit: percent
+    green: "Under 60%"
+    amber: "60-85%"
+    red: "Over 85%"
+  - id: maintainer-first-response
+    name: Median maintainer first response to issues
+    unit: days
+    green: "Under 14 days"
+    amber: "14-60 days"
+    red: "Over 60 days"
+  - id: critical-security-issues
+    name: Critical security issues
+    unit: qualitative
+    green: "No overdue unresolved issues"
+    amber: "Remediation in progress"
+    red: "Known serious issues ignored"
+  - id: release-activity
+    name: Release activity
+    unit: qualitative
+    green: "Predictable releases appropriate to project"
+    amber: "Irregular but supported"
+    red: "Stale despite significant fixes"
+
+disclaimer: Preliminary screening, not a substitute for engineering judgment.

@@ -14,6 +14,7 @@ rules/
   commercial-integration.yaml   Outcome per license family and activity (SaaS, distribution, ...)
   license-compatibility.yaml    Which licenses can be combined into one work
   legal-escalation.yaml         Triggers that send a finding to legal review
+  technical-screening.yaml      Green/amber/red thresholds for project health (commits, contributors, security, releases)
 references/
   official-sources.json         Authoritative sources and the risk legend
 schemas/
