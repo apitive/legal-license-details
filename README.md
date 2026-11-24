@@ -1,0 +1,1 @@
+# legal-license-details
