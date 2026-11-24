@@ -1,0 +1,18 @@
+{
+  "$schema": "../schemas/license.schema.json",
+  "spdx_id": "Artistic-2.0",
+  "name": "Artistic License 2.0",
+  "family": "conditional permissive/copy-left-like",
+  "commercial_product_integration": "Conditional",
+  "main_consideration": "Modified source distribution has multiple compliance routes; confirm chosen route",
+  "notice_attribution": "License + notices",
+  "source_code_distribution_trigger": "Depends on modification/distribution route",
+  "saas_network_consideration": "No generally stated AGPL-like trigger",
+  "default_screening_risk": "amber",
+  "reference_url": "https://spdx.org/licenses/Artistic-2.0.html",
+  "additional_sources": [
+    "https://spdx.org/licenses/"
+  ],
+  "legal_review_required": true,
+  "notes": "Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law."
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/license.schema.json",
+  "spdx_id": "EUPL-1.2",
+  "name": "European Union Public Licence 1.2",
+  "family": "copyleft with compatibility appendix",
+  "commercial_product_integration": "Conditional",
+  "main_consideration": "Distribution/share-alike and enumerated compatible license provisions; jurisdiction/compatibility review",
+  "notice_attribution": "Attribution + license",
+  "source_code_distribution_trigger": "Covered work when distributed/communicated as defined",
+  "saas_network_consideration": "Network provision may be distribution/communication under EUPL definitions; review",
+  "default_screening_risk": "amber",
+  "reference_url": "https://spdx.org/licenses/EUPL-1.2.html",
+  "additional_sources": [
+    "https://spdx.org/licenses/",
+    "https://opensource.org/licenses",
+    "https://www.gnu.org/licenses/gpl-faq.html"
+  ],
+  "legal_review_required": true,
+  "notes": "Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law."
+}

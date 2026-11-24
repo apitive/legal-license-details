@@ -1,0 +1,18 @@
+{
+  "$schema": "../schemas/license.schema.json",
+  "spdx_id": "Apache-2.0",
+  "name": "Apache License 2.0",
+  "family": "permissive",
+  "commercial_product_integration": "Generally allowed",
+  "main_consideration": "Keep license, required notices and changed-file notices; patent grant/termination",
+  "notice_attribution": "License, attribution, NOTICE when applicable",
+  "source_code_distribution_trigger": "None from Apache alone",
+  "saas_network_consideration": "None from Apache alone",
+  "default_screening_risk": "green",
+  "reference_url": "https://spdx.org/licenses/Apache-2.0.html",
+  "additional_sources": [
+    "https://spdx.org/licenses/"
+  ],
+  "legal_review_required": false,
+  "notes": "Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law."
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/license.schema.json",
+  "spdx_id": "AGPL-3.0-or-later",
+  "name": "GNU Affero General Public License v3.0 or later",
+  "family": "network copyleft",
+  "commercial_product_integration": "Conditional",
+  "main_consideration": "As AGPLv3 with later-version option; analyze modifications and combined work",
+  "notice_attribution": "License + notices",
+  "source_code_distribution_trigger": "Corresponding source upon distribution",
+  "saas_network_consideration": "Section 13 remote users of modified version",
+  "default_screening_risk": "amber",
+  "reference_url": "https://spdx.org/licenses/AGPL-3.0-or-later.html",
+  "additional_sources": [
+    "https://spdx.org/licenses/",
+    "https://opensource.org/licenses",
+    "https://www.gnu.org/licenses/gpl-faq.html"
+  ],
+  "legal_review_required": true,
+  "notes": "Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law."
+}

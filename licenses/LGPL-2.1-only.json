@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/license.schema.json",
+  "spdx_id": "LGPL-2.1-only",
+  "name": "GNU Lesser General Public License v2.1 only",
+  "family": "library copyleft",
+  "commercial_product_integration": "Conditional",
+  "main_consideration": "Library changes and relinking/replacement ability; static linking can increase packaging obligations",
+  "notice_attribution": "Notices + license",
+  "source_code_distribution_trigger": "Library source and applicable relinking materials upon distribution",
+  "saas_network_consideration": "No general network-source obligation",
+  "default_screening_risk": "amber",
+  "reference_url": "https://spdx.org/licenses/LGPL-2.1-only.html",
+  "additional_sources": [
+    "https://spdx.org/licenses/",
+    "https://opensource.org/licenses",
+    "https://www.gnu.org/licenses/gpl-faq.html"
+  ],
+  "legal_review_required": true,
+  "notes": "Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law."
+}

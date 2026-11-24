@@ -1,0 +1,18 @@
+{
+  "$schema": "../schemas/license.schema.json",
+  "spdx_id": "PolyForm-Noncommercial-1.0.0",
+  "name": "PolyForm Noncommercial License 1.0.0",
+  "family": "source-available noncommercial",
+  "commercial_product_integration": "Generally incompatible with commercial use",
+  "main_consideration": "Commercial use prohibited without separate license; check defined terms",
+  "notice_attribution": "Per license",
+  "source_code_distribution_trigger": "Not general open-source grant",
+  "saas_network_consideration": "Commercial hosting is restricted",
+  "default_screening_risk": "red",
+  "reference_url": "https://spdx.org/licenses/PolyForm-Noncommercial-1.0.0.html",
+  "additional_sources": [
+    "https://spdx.org/licenses/"
+  ],
+  "legal_review_required": true,
+  "notes": "Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law."
+}

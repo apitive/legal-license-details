@@ -1,0 +1,76 @@
+# When a finding must go to a human / legal reviewer.
+# Screening guidance only; not legal advice.
+version: "1.0"
+review_date: "2026-11-23"
+
+# Any matching trigger escalates.
+# Severity: high (stop, legal decides) | medium (legal review before release) | low (record and proceed)
+triggers:
+  - id: risk-red
+    when: "license.default_screening_risk == red"
+    severity: high
+    action: Stop. Obtain permission or remediate (replace or remove the component).
+  - id: risk-unknown
+    when: "license.default_screening_risk == unknown"
+    severity: high
+    action: Do not assume permission. Review the contract or obtain a license.
+  - id: no-license
+    when: "license.spdx_id == NOASSERTION"
+    severity: high
+    action: Do not copy or redistribute. Contact the rights holder.
+  - id: noncommercial
+    when: "license.family contains noncommercial"
+    severity: high
+    action: Commercial permission needed before any product use.
+  - id: network-copyleft-modified
+    when: "license.family == network copyleft and activity == saas_modified"
+    severity: high
+    action: AGPL section 13 source offer to remote users; legal decides.
+  - id: managed-service
+    when: "license in [SSPL-1.0, Elastic-2.0] and activity == managed_service_of_component"
+    severity: high
+    action: Restricted use; do not proceed without permission.
+  - id: incompatible-pair
+    when: "compatibility result == conflict"
+    severity: high
+    action: Remove one component or obtain a separate license.
+  - id: strong-copyleft-distribution
+    when: "license.family == strong copyleft and activity in [distributed_binary, distributed_source]"
+    severity: medium
+    action: Architecture and linking review; corresponding source obligations.
+  - id: library-copyleft-distribution
+    when: "license.family == library copyleft and activity == distributed_binary"
+    severity: medium
+    action: Confirm replaceable/relinkable library and source offer.
+  - id: file-level-copyleft-modified
+    when: "license.family in [file-level copyleft, weak copyleft] and component is modified and distributed"
+    severity: medium
+    action: Publish changes to covered files.
+  - id: custom-terms
+    when: "license in [BUSL-1.1, LicenseRef-Proprietary, Commons-Clause]"
+    severity: medium
+    action: Project-specific terms; read the actual text.
+  - id: version-ambiguity
+    when: "GPL/LGPL/AGPL without -only or -or-later"
+    severity: medium
+    action: Resolve the exact version before concluding.
+  - id: legal-review-flag
+    when: "license.legal_review_required == true"
+    severity: medium
+    action: Record in the compliance log and obtain review before release.
+  - id: multiple-licenses
+    when: "repo declares more than one license"
+    severity: low
+    action: Record the elected license.
+
+# Never decide these without legal.
+always_human:
+  - enforcement or dispute questions
+  - patent questions
+  - jurisdiction-specific validity (for example public-domain dedications)
+  - license text that is modified or has added exceptions
+
+# Required fields in any escalation ticket.
+ticket_fields: [component, version, license_spdx_id, activity, deployment_model, linking_method, modified, trigger_ids, source_urls]
+
+disclaimer: Preliminary screening, not legal advice.

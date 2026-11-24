@@ -1,0 +1,18 @@
+{
+  "$schema": "../schemas/license.schema.json",
+  "spdx_id": "CC-BY-NC-SA-4.0",
+  "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+  "family": "noncommercial content",
+  "commercial_product_integration": "Generally incompatible with commercial uses without permission",
+  "main_consideration": "NonCommercial + ShareAlike; request commercial grant",
+  "notice_attribution": "Attribution + change indication",
+  "source_code_distribution_trigger": "Share-alike if sharing permitted adaptation",
+  "saas_network_consideration": "None",
+  "default_screening_risk": "red",
+  "reference_url": "https://spdx.org/licenses/CC-BY-NC-SA-4.0.html",
+  "additional_sources": [
+    "https://spdx.org/licenses/"
+  ],
+  "legal_review_required": true,
+  "notes": "Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law."
+}

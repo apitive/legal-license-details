@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/license.schema.json",
+  "spdx_id": "CC-BY-SA-4.0",
+  "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+  "family": "content copyleft",
+  "commercial_product_integration": "Conditional for assets",
+  "main_consideration": "Adapted materials share-alike; possible incompatibility with software licenses",
+  "notice_attribution": "Attribution + change indication",
+  "source_code_distribution_trigger": "Share-alike for adaptations",
+  "saas_network_consideration": "None",
+  "default_screening_risk": "amber",
+  "reference_url": "https://spdx.org/licenses/CC-BY-SA-4.0.html",
+  "additional_sources": [
+    "https://spdx.org/licenses/",
+    "https://opensource.org/licenses",
+    "https://www.gnu.org/licenses/gpl-faq.html"
+  ],
+  "legal_review_required": true,
+  "notes": "Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law."
+}

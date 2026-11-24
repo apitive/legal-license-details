@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/license.schema.json",
+  "spdx_id": "CDDL-1.0",
+  "name": "Common Development and Distribution License 1.0",
+  "family": "file-level copyleft",
+  "commercial_product_integration": "Conditional",
+  "main_consideration": "Covered source modifications and corresponding source on distribution; GPL combination may conflict",
+  "notice_attribution": "Required notices + license",
+  "source_code_distribution_trigger": "Covered files when distributing",
+  "saas_network_consideration": "No general network-source obligation",
+  "default_screening_risk": "amber",
+  "reference_url": "https://spdx.org/licenses/CDDL-1.0.html",
+  "additional_sources": [
+    "https://spdx.org/licenses/",
+    "https://opensource.org/licenses",
+    "https://www.gnu.org/licenses/gpl-faq.html"
+  ],
+  "legal_review_required": true,
+  "notes": "Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law."
+}

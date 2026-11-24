@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/license.schema.json",
+  "spdx_id": "MPL-2.0",
+  "name": "Mozilla Public License 2.0",
+  "family": "file-level copyleft",
+  "commercial_product_integration": "Conditional",
+  "main_consideration": "Modifications to MPL-covered files and distribution of those files trigger source/licensing duties; check secondary licenses",
+  "notice_attribution": "Notices and license",
+  "source_code_distribution_trigger": "Covered files upon distribution",
+  "saas_network_consideration": "No general network-source obligation",
+  "default_screening_risk": "amber",
+  "reference_url": "https://spdx.org/licenses/MPL-2.0.html",
+  "additional_sources": [
+    "https://spdx.org/licenses/",
+    "https://opensource.org/licenses",
+    "https://www.gnu.org/licenses/gpl-faq.html"
+  ],
+  "legal_review_required": true,
+  "notes": "Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law."
+}

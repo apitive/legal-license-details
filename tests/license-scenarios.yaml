@@ -1,0 +1,104 @@
+# Scenario tests for the rules. `tests/validate.py` checks that every scenario's expectations
+# agree with licenses/*.json and rules/*.yaml.
+version: "1.0"
+
+scenarios:
+  - id: mit-saas
+    license: MIT
+    activity: saas_hosted
+    expect: { risk: green, outcome: allow_with_conditions, legal_review: false, escalate: [] }
+
+  - id: apache-distributed
+    license: Apache-2.0
+    activity: distributed_binary
+    expect: { risk: green, outcome: allow_with_conditions, legal_review: false, escalate: [] }
+
+  - id: gpl3-internal
+    license: GPL-3.0-only
+    activity: internal_use
+    expect: { risk: amber, outcome: allow, legal_review: true, escalate: [legal-review-flag] }
+
+  - id: gpl3-distributed
+    license: GPL-3.0-only
+    activity: distributed_binary
+    expect: { risk: amber, outcome: review, legal_review: true, escalate: [strong-copyleft-distribution, legal-review-flag] }
+
+  - id: gpl3-saas-unmodified
+    license: GPL-3.0-only
+    activity: saas_hosted
+    expect: { risk: amber, outcome: allow_with_conditions, legal_review: true, escalate: [legal-review-flag] }
+
+  - id: agpl-saas-modified
+    license: AGPL-3.0-only
+    activity: saas_modified
+    expect: { risk: amber, outcome: block_without_review, legal_review: true, escalate: [network-copyleft-modified, legal-review-flag] }
+
+  - id: lgpl-distributed
+    license: LGPL-3.0-only
+    activity: distributed_binary
+    expect: { risk: amber, outcome: review, legal_review: true, escalate: [library-copyleft-distribution, legal-review-flag] }
+
+  - id: mpl-saas
+    license: MPL-2.0
+    activity: saas_hosted
+    expect: { risk: amber, outcome: allow_with_conditions, legal_review: true, escalate: [legal-review-flag] }
+
+  - id: cc-by-nc-product
+    license: CC-BY-NC-4.0
+    activity: assets_embedded
+    expect: { risk: red, outcome: block, legal_review: true, escalate: [risk-red, noncommercial, legal-review-flag] }
+
+  - id: cc-by-font-asset
+    license: CC-BY-4.0
+    activity: assets_embedded
+    expect: { risk: amber, outcome: allow_with_conditions, legal_review: true, escalate: [legal-review-flag] }
+
+  - id: ofl-font
+    license: OFL-1.1
+    activity: assets_embedded
+    expect: { risk: green, outcome: allow_with_conditions, legal_review: false, escalate: [] }
+
+  - id: sspl-managed-service
+    license: SSPL-1.0
+    activity: managed_service_of_component
+    expect: { risk: red, outcome: block, legal_review: true, escalate: [risk-red, managed-service, legal-review-flag] }
+
+  - id: elastic-managed-service
+    license: Elastic-2.0
+    activity: managed_service_of_component
+    expect: { risk: amber, outcome: block, legal_review: true, escalate: [managed-service, legal-review-flag] }
+
+  - id: busl-saas
+    license: BUSL-1.1
+    activity: saas_hosted
+    expect: { risk: amber, outcome: review, legal_review: true, escalate: [custom-terms, legal-review-flag] }
+
+  - id: commons-clause
+    license: Commons-Clause
+    activity: saas_hosted
+    expect: { risk: red, outcome: block, legal_review: true, escalate: [risk-red, custom-terms, legal-review-flag] }
+
+  - id: proprietary-eula
+    license: LicenseRef-Proprietary
+    activity: distributed_binary
+    expect: { risk: unknown, outcome: unknown, legal_review: true, escalate: [risk-unknown, custom-terms, legal-review-flag] }
+
+  - id: no-license-repo
+    license: NOASSERTION
+    activity: distributed_binary
+    expect: { risk: unknown, outcome: unknown, legal_review: true, escalate: [risk-unknown, no-license, legal-review-flag] }
+
+# Compatibility scenarios: first matching pair in rules/license-compatibility.yaml wins.
+compatibility:
+  - { inbound: MIT, outbound: proprietary, expect: compatible }
+  - { inbound: Apache-2.0, outbound: GPL-3.0-only, expect: one_way }
+  - { inbound: Apache-2.0, outbound: GPL-2.0-only, expect: conflict }
+  - { inbound: GPL-2.0-only, outbound: GPL-3.0-only, expect: conflict }
+  - { inbound: GPL-2.0-or-later, outbound: GPL-3.0-only, expect: compatible }
+  - { inbound: GPL-3.0-only, outbound: AGPL-3.0-only, expect: compatible }
+  - { inbound: CDDL-1.0, outbound: GPL-2.0-only, expect: conflict }
+  - { inbound: LGPL-2.1-only, outbound: proprietary, expect: review }
+  - { inbound: CC-BY-NC-4.0, outbound: proprietary, expect: conflict }
+  - { inbound: NOASSERTION, outbound: proprietary, expect: conflict }
+  - { inbound: ISC, outbound: AGPL-3.0-only, expect: compatible }
+  - { inbound: MPL-2.0, outbound: MIT, expect: review }   # no pair matches, falls back to default

@@ -1,0 +1,18 @@
+{
+  "$schema": "../schemas/license.schema.json",
+  "spdx_id": "0BSD",
+  "name": "BSD Zero Clause License",
+  "family": "permissive",
+  "commercial_product_integration": "Generally allowed",
+  "main_consideration": "Minimal conditions; check other materials",
+  "notice_attribution": "Usually none under this license",
+  "source_code_distribution_trigger": "None",
+  "saas_network_consideration": "None",
+  "default_screening_risk": "green",
+  "reference_url": "https://spdx.org/licenses/0BSD.html",
+  "additional_sources": [
+    "https://spdx.org/licenses/"
+  ],
+  "legal_review_required": false,
+  "notes": "Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law."
+}

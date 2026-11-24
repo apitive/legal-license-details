@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/license.schema.json",
+  "spdx_id": "GPL-2.0-or-later",
+  "name": "GNU General Public License v2.0 or later",
+  "family": "strong copyleft",
+  "commercial_product_integration": "Conditional",
+  "main_consideration": "Recipient may use later versions; evaluate selected-version compatibility and source duties",
+  "notice_attribution": "License + notices",
+  "source_code_distribution_trigger": "Corresponding source upon distribution",
+  "saas_network_consideration": "Hosted use alone generally no source trigger",
+  "default_screening_risk": "amber",
+  "reference_url": "https://spdx.org/licenses/GPL-2.0-or-later.html",
+  "additional_sources": [
+    "https://spdx.org/licenses/",
+    "https://opensource.org/licenses",
+    "https://www.gnu.org/licenses/gpl-faq.html"
+  ],
+  "legal_review_required": true,
+  "notes": "Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law."
+}

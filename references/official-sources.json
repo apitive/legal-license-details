@@ -1,0 +1,39 @@
+{
+  "title": "Commercial Integration License Knowledge Base",
+  "version": "1.0",
+  "review_date": "2026-11-23",
+  "scope": "Curated common software, content and source-available licensing patterns; not the complete SPDX list",
+  "risk_legend": {
+    "green": "generally low-friction with conditions",
+    "amber": "conditional, requires architecture/compliance review",
+    "red": "likely incompatible with proposed restricted activity or high-risk; obtain permission/remediate",
+    "unknown": "insufficient evidence or rights grant"
+  },
+  "official_sources": [
+    {
+      "url": "https://spdx.org/licenses/",
+      "publisher": "SPDX",
+      "use": "License identifiers and canonical texts"
+    },
+    {
+      "url": "https://opensource.org/licenses",
+      "publisher": "Open Source Initiative",
+      "use": "OSI-approved license list"
+    },
+    {
+      "url": "https://choosealicense.com/appendix/",
+      "publisher": "GitHub",
+      "use": "Plain-language license summaries"
+    },
+    {
+      "url": "https://www.gnu.org/licenses/gpl-faq.html",
+      "publisher": "Free Software Foundation",
+      "use": "GPL family interpretation and compatibility"
+    },
+    {
+      "url": "https://creativecommons.org/faq/",
+      "publisher": "Creative Commons",
+      "use": "CC license FAQ"
+    }
+  ]
+}

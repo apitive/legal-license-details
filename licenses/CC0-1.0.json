@@ -1,0 +1,18 @@
+{
+  "$schema": "../schemas/license.schema.json",
+  "spdx_id": "CC0-1.0",
+  "name": "Creative Commons Zero v1.0 Universal",
+  "family": "public-domain-style dedication",
+  "commercial_product_integration": "Generally allowed for covered material",
+  "main_consideration": "Patent and trademark rights are not granted; software suitability review",
+  "notice_attribution": "No attribution condition, but track provenance",
+  "source_code_distribution_trigger": "None",
+  "saas_network_consideration": "None",
+  "default_screening_risk": "amber",
+  "reference_url": "https://spdx.org/licenses/CC0-1.0.html",
+  "additional_sources": [
+    "https://spdx.org/licenses/"
+  ],
+  "legal_review_required": true,
+  "notes": "Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law."
+}

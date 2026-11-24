@@ -1,0 +1,18 @@
+{
+  "$schema": "../schemas/license.schema.json",
+  "spdx_id": "NOASSERTION",
+  "name": "No identifiable license grant",
+  "family": "unlicensed / unknown",
+  "commercial_product_integration": "Do not assume integration permission",
+  "main_consideration": "Seek rights-holder permission or establish separate applicable license before copying/redistribution",
+  "notice_attribution": "Unknown",
+  "source_code_distribution_trigger": "Unknown",
+  "saas_network_consideration": "Unknown",
+  "default_screening_risk": "unknown",
+  "reference_url": "https://choosealicense.com/no-permission/",
+  "additional_sources": [
+    "https://spdx.org/licenses/"
+  ],
+  "legal_review_required": true,
+  "notes": "Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law."
+}

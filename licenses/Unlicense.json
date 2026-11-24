@@ -1,0 +1,18 @@
+{
+  "$schema": "../schemas/license.schema.json",
+  "spdx_id": "Unlicense",
+  "name": "The Unlicense",
+  "family": "public-domain-style dedication",
+  "commercial_product_integration": "Generally allowed, jurisdiction-dependent",
+  "main_consideration": "Dedication/fallback terms and validity differ by jurisdiction; check patent rights",
+  "notice_attribution": "Check included text",
+  "source_code_distribution_trigger": "None",
+  "saas_network_consideration": "None",
+  "default_screening_risk": "amber",
+  "reference_url": "https://spdx.org/licenses/Unlicense.html",
+  "additional_sources": [
+    "https://spdx.org/licenses/"
+  ],
+  "legal_review_required": true,
+  "notes": "Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law."
+}

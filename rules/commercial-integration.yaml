@@ -1,0 +1,161 @@
+# Commercial integration rules.
+# Screening guidance only; not legal advice. Facts are drawn from licenses/*.json.
+version: "1.0"
+review_date: "2026-11-23"
+
+# Activities a license is evaluated against.
+activities:
+  internal_use: Used inside the company only; not distributed and not offered to third parties.
+  saas_hosted: Run on company servers; users interact over a network; software is not delivered to users.
+  saas_modified: As saas_hosted, but the component was modified by us.
+  distributed_binary: Shipped to customers as part of a product (installer, app, container, device).
+  distributed_source: Source code shipped or published.
+  managed_service_of_component: Offering the component itself (or a near-equivalent) as a managed service.
+  assets_embedded: Fonts, images, docs or other non-code content embedded in the product.
+
+# Outcomes: allow | allow_with_conditions | review | block | block_without_review | unknown
+# Activities not listed under a family fall back to that family's `default`.
+families:
+  permissive:
+    licenses: [MIT, Apache-2.0, BSD-2-Clause, BSD-3-Clause, ISC, 0BSD, Zlib, BSL-1.0]
+    default: allow_with_conditions
+    conditions: [keep_copyright_and_license_text, include_notice_file_if_present]
+    legal_review: false
+  permissive_with_advertising:
+    licenses: [BSD-4-Clause]
+    default: review
+    conditions: [advertising_acknowledgement, check_gpl_compatibility]
+    legal_review: true
+  public_domain_style:
+    licenses: [Unlicense, CC0-1.0]
+    default: review
+    conditions: [verify_jurisdiction_validity, no_patent_or_trademark_grant, record_provenance]
+    legal_review: true
+  file_level_copyleft:
+    licenses: [MPL-2.0, CDDL-1.0]
+    default: allow_with_conditions
+    activities:
+      distributed_binary: review
+      distributed_source: review
+      saas_hosted: allow_with_conditions
+    conditions: [keep_covered_files_separable, publish_covered_file_source_on_distribution]
+    legal_review: true
+  weak_copyleft:
+    licenses: [EPL-2.0]
+    default: allow_with_conditions
+    activities:
+      distributed_binary: review
+    conditions: [publish_covered_contributions_on_distribution, check_secondary_license_and_patent_terms]
+    legal_review: true
+  library_copyleft:
+    licenses: [LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only]
+    default: review
+    activities:
+      internal_use: allow
+      saas_hosted: allow_with_conditions
+    conditions: [allow_library_replacement_or_relinking, provide_library_source_on_distribution, installation_info_if_lgpl3_user_product]
+    legal_review: true
+  strong_copyleft:
+    licenses: [GPL-2.0-only, GPL-2.0-or-later, GPL-3.0-only, GPL-3.0-or-later]
+    default: review
+    activities:
+      internal_use: allow
+      saas_hosted: allow_with_conditions # hosting alone generally does not trigger source duties
+      saas_modified: allow_with_conditions
+      distributed_binary: review # combined work may need to be offered under the GPL
+      distributed_source: review
+    conditions: [corresponding_source_on_distribution, check_exact_version_compatibility]
+    legal_review: true
+  network_copyleft:
+    licenses: [AGPL-3.0-only, AGPL-3.0-or-later]
+    default: review
+    activities:
+      internal_use: allow
+      saas_hosted: review # unmodified: usually no trigger, confirm
+      saas_modified: block_without_review # section 13: offer source to remote users
+      distributed_binary: review
+    conditions: [section13_source_offer_if_modified, corresponding_source_on_distribution]
+    legal_review: true
+  eu_copyleft:
+    licenses: [EUPL-1.2]
+    default: review
+    conditions: [check_compatibility_appendix, network_provision_may_count_as_communication]
+    legal_review: true
+  conditional_permissive:
+    licenses: [Artistic-2.0]
+    default: review
+    conditions: [confirm_chosen_compliance_route_for_modified_source]
+    legal_review: true
+  font:
+    licenses: [OFL-1.1]
+    default: allow_with_conditions
+    activities:
+      assets_embedded: allow_with_conditions
+    conditions: [do_not_sell_font_alone, respect_reserved_font_names, modified_fonts_stay_under_ofl]
+    legal_review: false
+  content_attribution:
+    licenses: [CC-BY-4.0, CC-BY-ND-4.0]
+    default: review
+    activities:
+      assets_embedded: allow_with_conditions
+    conditions: [attribution, indicate_changes, link_to_license]
+    notes: Not recommended for software code. ND forbids sharing adapted material.
+    legal_review: true
+  content_copyleft:
+    licenses: [CC-BY-SA-4.0]
+    default: review
+    conditions: [share_adaptations_under_same_or_compatible_license, check_software_license_compatibility]
+    notes: Not recommended for software code.
+    legal_review: true
+  noncommercial:
+    licenses: [CC-BY-NC-4.0, CC-BY-NC-SA-4.0, CC-BY-NC-ND-4.0, PolyForm-Noncommercial-1.0.0]
+    default: block
+    conditions: [obtain_commercial_permission_from_rights_holder]
+    legal_review: true
+  source_available_service_restricted:
+    licenses: [SSPL-1.0, Elastic-2.0]
+    default: review
+    activities:
+      internal_use: allow_with_conditions
+      managed_service_of_component: block
+      saas_hosted: review
+    conditions: [do_not_offer_component_as_managed_service, do_not_remove_notices_or_circumvent_license_keys]
+    legal_review: true
+  source_available_custom:
+    licenses: [BUSL-1.1]
+    default: review
+    activities:
+      saas_hosted: review # production use may be restricted
+    conditions: [read_additional_use_grant, record_change_date_and_change_license]
+    legal_review: true
+  restriction_addendum:
+    licenses: [Commons-Clause]
+    default: block
+    conditions: [analyse_base_license_plus_sale_restriction, obtain_permission_if_selling_or_monetising]
+    legal_review: true
+  proprietary:
+    licenses: [LicenseRef-Proprietary]
+    default: unknown
+    conditions: [review_contract_for_redistribution_and_use_rights, review_indemnities]
+    legal_review: true
+  no_license:
+    licenses: [NOASSERTION]
+    default: unknown
+    conditions: [do_not_copy_or_redistribute, request_license_from_rights_holder]
+    legal_review: true
+
+# Global rules evaluated for every finding.
+global:
+  - id: no-license-no-use
+    when: license is NOASSERTION or no license file is found
+    then: block_until_permission
+    note: Default copyright rules apply; do not assume integration permission.
+  - id: verify-version-and-exceptions
+    when: always
+    then: confirm exact license version, "-only" vs "-or-later", and any exceptions
+  - id: deployment-matters
+    when: always
+    then: record deployment model (internal, SaaS, distributed) before concluding
+  - id: dual-or-multi-licensed
+    when: repository states more than one license
+    then: record which license is elected and why

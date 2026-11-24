@@ -1,0 +1,94 @@
+# Combination (compatibility) rules between licenses in one combined work.
+# Screening guidance only; not legal advice. Directional: `inbound` code may be combined into a
+# work released under `outbound` terms.
+version: "1.0"
+review_date: "2026-11-23"
+sources:
+  - https://www.gnu.org/licenses/gpl-faq.html
+  - https://creativecommons.org/faq/
+
+# Results: compatible | one_way | conflict | review
+# Pairs are evaluated top to bottom; the first match wins.
+pairs:
+  - inbound: [MIT, BSD-2-Clause, BSD-3-Clause, ISC, 0BSD, Zlib, BSL-1.0, Apache-2.0]
+    outbound: [proprietary]
+    result: compatible
+    note: Keep notices. Apache-2.0 also carries patent grant/termination and NOTICE file duties.
+
+  - inbound: [MIT, BSD-2-Clause, BSD-3-Clause, ISC, 0BSD, Zlib, BSL-1.0]
+    outbound: [GPL-2.0-only, GPL-2.0-or-later, GPL-3.0-only, GPL-3.0-or-later, AGPL-3.0-only, AGPL-3.0-or-later]
+    result: compatible
+    note: Permissive code can be included in a GPL-family work; the combined work is under the GPL terms.
+
+  - inbound: [Apache-2.0]
+    outbound: [GPL-3.0-only, GPL-3.0-or-later, AGPL-3.0-only, AGPL-3.0-or-later]
+    result: one_way
+    note: Apache-2.0 into GPLv3/AGPLv3 works is accepted; the reverse direction is not.
+
+  - inbound: [Apache-2.0]
+    outbound: [GPL-2.0-only, GPL-2.0-or-later]
+    result: conflict
+    note: FSF position - Apache-2.0 patent terms are incompatible with GPLv2-only. An "or-later" work may be used under v3 instead; review.
+
+  - inbound: [GPL-2.0-only]
+    outbound: [GPL-3.0-only, GPL-3.0-or-later]
+    result: conflict
+    note: Version incompatibility. GPL-2.0-only code cannot be relicensed to v3.
+
+  - inbound: [GPL-2.0-or-later]
+    outbound: [GPL-3.0-only, GPL-3.0-or-later]
+    result: compatible
+    note: The "or later" option permits use under v3.
+
+  - inbound: [GPL-3.0-only, GPL-3.0-or-later]
+    outbound: [AGPL-3.0-only, AGPL-3.0-or-later]
+    result: compatible
+    note: GPLv3 and AGPLv3 have explicit combination provisions; AGPL section 13 applies to the combined work.
+
+  - inbound: [LGPL-2.1-only, LGPL-2.1-or-later, LGPL-3.0-only]
+    outbound: [proprietary]
+    result: review
+    note: Typically workable when the library stays replaceable/relinkable; static linking raises packaging obligations.
+
+  - inbound: [BSD-4-Clause]
+    outbound: [GPL-2.0-only, GPL-2.0-or-later, GPL-3.0-only, GPL-3.0-or-later]
+    result: conflict
+    note: The advertising clause raises GPL compatibility concerns.
+
+  - inbound: [CDDL-1.0]
+    outbound: [GPL-2.0-only, GPL-2.0-or-later, GPL-3.0-only, GPL-3.0-or-later]
+    result: conflict
+    note: A GPL combination may conflict with CDDL terms.
+
+  - inbound: [MPL-2.0]
+    outbound: [proprietary]
+    result: review
+    note: Covered files stay MPL and their source must be provided on distribution; keep them separable. Check secondary licenses for GPL combination.
+
+  - inbound: [EPL-2.0]
+    outbound: [GPL-2.0-only, GPL-2.0-or-later, GPL-3.0-only, GPL-3.0-or-later]
+    result: review
+    note: Depends on secondary-license provisions of EPL-2.0.
+
+  - inbound: [CC-BY-4.0, CC-BY-SA-4.0]
+    outbound: [GPL-3.0-only, GPL-3.0-or-later]
+    result: review
+    note: CC licenses are not recommended for code; verify share-alike path with legal.
+
+  - inbound: [CC-BY-NC-4.0, CC-BY-NC-SA-4.0, CC-BY-NC-ND-4.0, PolyForm-Noncommercial-1.0.0]
+    outbound: [proprietary, any_commercial]
+    result: conflict
+    note: NonCommercial restriction conflicts with commercial products without permission.
+
+  - inbound: [SSPL-1.0, Elastic-2.0, BUSL-1.1, Commons-Clause]
+    outbound: [any_open_source]
+    result: conflict
+    note: Source-available terms are not open source licenses; the restrictions travel with the code.
+
+  - inbound: [NOASSERTION]
+    outbound: [any]
+    result: conflict
+    note: No license grant, so no combination permission.
+
+# Fallback if no pair matches.
+default: review

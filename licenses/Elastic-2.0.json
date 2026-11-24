@@ -1,0 +1,18 @@
+{
+  "$schema": "../schemas/license.schema.json",
+  "spdx_id": "Elastic-2.0",
+  "name": "Elastic License 2.0",
+  "family": "source-available",
+  "commercial_product_integration": "Conditional",
+  "main_consideration": "Restrictions include providing as a managed service, circumvention of license-key functionality, and removal of notices",
+  "notice_attribution": "License + notices",
+  "source_code_distribution_trigger": "No generic copyleft",
+  "saas_network_consideration": "Managed-service restriction",
+  "default_screening_risk": "amber",
+  "reference_url": "https://spdx.org/licenses/Elastic-2.0.html",
+  "additional_sources": [
+    "https://spdx.org/licenses/"
+  ],
+  "legal_review_required": true,
+  "notes": "Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law."
+}

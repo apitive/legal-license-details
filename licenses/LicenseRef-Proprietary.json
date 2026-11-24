@@ -1,0 +1,18 @@
+{
+  "$schema": "../schemas/license.schema.json",
+  "spdx_id": "LicenseRef-Proprietary",
+  "name": "Proprietary / custom EULA",
+  "family": "proprietary",
+  "commercial_product_integration": "Permission depends on contract",
+  "main_consideration": "Must review product-specific contract, redistribution and use rights, indemnities",
+  "notice_attribution": "Contract-specific",
+  "source_code_distribution_trigger": "Contract-specific",
+  "saas_network_consideration": "Contract-specific",
+  "default_screening_risk": "unknown",
+  "reference_url": "https://spdx.github.io/spdx-spec/v2.3/other-licensing-information-detected/",
+  "additional_sources": [
+    "https://spdx.org/licenses/"
+  ],
+  "legal_review_required": true,
+  "notes": "Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law."
+}

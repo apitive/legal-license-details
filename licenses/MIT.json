@@ -1,0 +1,18 @@
+{
+  "$schema": "../schemas/license.schema.json",
+  "spdx_id": "MIT",
+  "name": "MIT License",
+  "family": "permissive",
+  "commercial_product_integration": "Generally allowed",
+  "main_consideration": "Keep copyright and license text",
+  "notice_attribution": "Copyright + license",
+  "source_code_distribution_trigger": "None from MIT alone",
+  "saas_network_consideration": "None from MIT alone",
+  "default_screening_risk": "green",
+  "reference_url": "https://spdx.org/licenses/MIT.html",
+  "additional_sources": [
+    "https://spdx.org/licenses/"
+  ],
+  "legal_review_required": false,
+  "notes": "Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law."
+}

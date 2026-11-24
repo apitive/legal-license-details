@@ -1,0 +1,18 @@
+{
+  "$schema": "../schemas/license.schema.json",
+  "spdx_id": "BUSL-1.1",
+  "name": "Business Source License 1.1",
+  "family": "source-available/custom parameters",
+  "commercial_product_integration": "Depends on individual project terms",
+  "main_consideration": "Additional Use Grant, change date and change license determine rights; not automatically unrestricted commercial use",
+  "notice_attribution": "As specified in project",
+  "source_code_distribution_trigger": "Per project",
+  "saas_network_consideration": "Per project; production may be restricted",
+  "default_screening_risk": "amber",
+  "reference_url": "https://spdx.org/licenses/BUSL-1.1.html",
+  "additional_sources": [
+    "https://spdx.org/licenses/"
+  ],
+  "legal_review_required": true,
+  "notes": "Screening guidance only; verify exact version, exceptions, deployment, distribution, modifications and applicable law."
+}

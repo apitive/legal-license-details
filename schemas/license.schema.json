@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/apitive/legal-license-details/schemas/license.schema.json",
+  "title": "License record",
+  "description": "One curated license entry. Screening guidance only; not legal advice.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "spdx_id", "name", "family", "commercial_product_integration",
+    "main_consideration", "notice_attribution", "source_code_distribution_trigger",
+    "saas_network_consideration", "default_screening_risk", "reference_url",
+    "additional_sources", "legal_review_required", "notes"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "spdx_id": {
+      "type": "string",
+      "description": "SPDX identifier, or LicenseRef-/NOASSERTION/Commons-Clause style pseudo-ids. Must equal the file name without .json.",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9.+-]*$"
+    },
+    "name": { "type": "string", "minLength": 1 },
+    "family": { "type": "string", "minLength": 1 },
+    "commercial_product_integration": { "type": "string", "minLength": 1 },
+    "main_consideration": { "type": "string", "minLength": 1 },
+    "notice_attribution": { "type": "string", "minLength": 1 },
+    "source_code_distribution_trigger": { "type": "string", "minLength": 1 },
+    "saas_network_consideration": { "type": "string", "minLength": 1 },
+    "default_screening_risk": { "enum": ["green", "amber", "red", "unknown"] },
+    "reference_url": { "type": "string", "format": "uri", "pattern": "^https?://" },
+    "additional_sources": {
+      "type": "array",
+      "items": { "type": "string", "format": "uri", "pattern": "^https?://" },
+      "uniqueItems": true
+    },
+    "legal_review_required": { "type": "boolean" },
+    "notes": { "type": "string" }
+  },
+  "allOf": [
+    {
+      "description": "Anything not green must be reviewed by legal.",
+      "if": { "properties": { "default_screening_risk": { "enum": ["amber", "red", "unknown"] } } },
+      "then": { "properties": { "legal_review_required": { "const": true } } }
+    }
+  ]
+}
